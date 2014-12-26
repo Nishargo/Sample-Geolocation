@@ -5,20 +5,20 @@
   "ProjectName": "sample-geolocation",
   "IsRunnable": "true",
   "AndroidPermissions": [
-    "android.permission.CAMERA",
-    "android.permission.VIBRATE",
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
     "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
-    "android.permission.READ_PHONE_STATE",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.CAMERA",
     "android.permission.INTERNET",
-    "android.permission.RECEIVE_SMS",
-    "android.permission.RECORD_AUDIO",
     "android.permission.MODIFY_AUDIO_SETTINGS",
     "android.permission.READ_CONTACTS",
+    "android.permission.READ_PHONE_STATE",
+    "android.permission.RECEIVE_SMS",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.VIBRATE",
     "android.permission.WRITE_CONTACTS",
-    "android.permission.WRITE_EXTERNAL_STORAGE",
-    "android.permission.ACCESS_NETWORK_STATE"
+    "android.permission.WRITE_EXTERNAL_STORAGE"
   ],
   "DeviceOrientations": [
     "Portrait",
@@ -34,7 +34,7 @@
   "iOSBackgroundMode": [],
   "AndroidVersionCode": "1",
   "AndroidHardwareAcceleration": "false",
-  "FrameworkVersion": "3.5.0",
+  "FrameworkVersion": "3.7.0",
   "CorePlugins": [
     "org.apache.cordova.geolocation",
     "org.apache.cordova.splashscreen"
@@ -47,5 +47,12 @@
   ],
   "Author": "",
   "Description": "sample-geolocation",
-  "Framework": "Cordova"
+  "Framework": "Cordova",
+  "projectVersion": "1",
+  "WP8PublisherID": "{05dbba99-8d8b-4500-8252-e633a8d88a23}",
+  "WP8ProductID": "{362e275f-6f52-452c-87ce-a07c4c82a6e2}",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8Publisher": "",
+  "WP8TileTitle": ""
 }
