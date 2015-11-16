@@ -4,7 +4,6 @@ Geolocation
 
 <a id="top"></a>
 * [Overview](#overview)
-* [Showcased APIs](#showcased-apis)
 * [Screenshots](#screenshots)
 * [Test the Sample](#test-the-sample)
 
@@ -15,16 +14,6 @@ This sample shows you how to use the Geolocation API to get geolocation informat
 > *Supported mobile platforms:* iOS, Android, Windows Phone
 >
 > *Developed with:* Apache Cordova 3.7.0
-
-[Back to Top](#top)
-
-# Showcased APIs
-
-This sample shows how to use the following methods of the [Geolocation API][Geolocation API].
-
-* **getCurrentPosition():** Returns the position of the device to the success handler as a `Position` object. If the retrieval of geolocation information is unsuccessful, the error handler is called with a `geolocationError` object as argument. This method takes as third argument `geolocationOptions` objects.
-* **watchPosition():** Watches the change of latitude and longitude of the device. When the position of the device changes, this method calls its success handler with a `Position` object as argument and returns a `watchID` object. If the retrieval of geolocation information is unsuccessful or the device position has not changed during the specified timeout, the error handler is called with a `geolocationError` object as argument. This method takes as third argument `geolocationOptions` objects. To set the timeout, use `geolocationOptions`.
-* **clearWatch():** Stops watching for changes in the device latitude and longitude. This method clears the `geolocation.watchPosition` that is referenced by `watchID`.
 
 [Back to Top](#top)
 
@@ -148,4 +137,3 @@ With the AppBuilder command-line interface, you can quickly test your apps on de
 [QR code]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-on-devices/deploy-remote
 [USB deploy]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-on-devices/running-on-connected-devices/deploy-connected
 [emulators]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-in-emulators/native-emulators
-[Geolocation API]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation

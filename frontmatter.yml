@@ -5,3 +5,4 @@ description: This sample shows you how to use the Geolocation Apache Cordova cor
 tags: Apache Cordova, core, geolocation, gps, iOS, Android, Windows Phone
 publish: true
 content_filter: true
+apis: cordova.geolocation cordova.geolocation.getCurrentPosition cordova.geolocation.watchPosition cordova.geolocation.clearWatch
