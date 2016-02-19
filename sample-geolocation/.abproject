@@ -30,11 +30,12 @@
 		"2"
 	],
 	"AndroidVersionCode": "1",
-	"AndroidHardwareAcceleration": "false",
-	"FrameworkVersion": "3.7.0",
+	"AndroidHardwareAcceleration": "true",
+	"FrameworkVersion": "4.0.0",
 	"CorePlugins": [
-		"org.apache.cordova.geolocation",
-		"org.apache.cordova.splashscreen"
+		"cordova-plugin-geolocation",
+		"cordova-plugin-splashscreen",
+		"cordova-plugin-whitelist"
 	],
 	"DisplayName": "Geolocation",
 	"WP8SupportedResolutions": [
