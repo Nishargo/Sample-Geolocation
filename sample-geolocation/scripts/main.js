@@ -29,11 +29,12 @@ geolocationApp.prototype = {
     
 	_handleRefresh:function() {
         var options = {
-            	enableHighAccuracy: true
+                enableHighAccuracy: true,
+                timeout: 10000
             },
             that = this;
         
-        that._setResults("Waiting for geolocation information...");
+        that._setStatus("Waiting for geolocation information...");
         
 		navigator.geolocation.getCurrentPosition(function() {
 			that._onSuccess.apply(that, arguments);
@@ -48,17 +49,19 @@ geolocationApp.prototype = {
 		button = document.getElementById("watchButton");
                      
 		if (that._watchID != null) {
-			that._setResults();
+		    that._setStatus();
+		    document.getElementById("results").classList.add("hidden");
 			navigator.geolocation.clearWatch(that._watchID);
 			that._watchID = null;
                          
 			button.innerHTML = "Start Geolocation Watch";
 		}
 		else {
-			that._setResults("Waiting for geolocation information...");
+		    this._setStatus("Waiting for geolocation information...");
 			// Update the watch every second.
 			var options = {
-				frequency: 1000,
+			    frequency: 1000,
+                timeout: 10000,
 				enableHighAccuracy: true
 			};
 			that._watchID = navigator.geolocation.watchPosition(function() {
@@ -72,29 +75,30 @@ geolocationApp.prototype = {
 	},
     
 	_onSuccess:function(position) {
-		// Successfully retrieved the geolocation information. Display it all.
-        
-		this._setResults('Latitude: ' + position.coords.latitude + '<br />' +
-						 'Longitude: ' + position.coords.longitude + '<br />' +
-						 'Altitude: ' + position.coords.altitude + '<br />' +
-						 'Accuracy: ' + position.coords.accuracy + '<br />' +
-						 'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '<br />' +
-						 'Heading: ' + position.coords.heading + '<br />' +
-						 'Speed: ' + position.coords.speed + '<br />' +
-						 'Timestamp: ' + new Date(position.timestamp).toLocaleTimeString().split(" ")[0] + '<br />');
+	    // Successfully retrieved the geolocation information. Display it all.
+
+	    for (key in position.coords) {
+	        document.getElementById(key).innerText = position.coords[key];
+	    }
+        document.getElementById("timestamp").innerText = new Date(position.timestamp).toLocaleTimeString().split(" ")[0];
+
+        this._setStatus();
+        document.getElementById("results").classList.remove("hidden");
 	},
     
-	_onError:function(error) {
-		this._setResults('code: ' + error.code + '<br/>' +
+	_onError: function (error) {
+		this._setStatus('code: ' + error.code + '<br/>' +
 						 'message: ' + error.message + '<br/>');
+
+		document.getElementById("results").classList.add("hidden");
 	},
-    
-	_setResults:function(value) {
-		if (!value) {
-			document.getElementById("results").innerHTML = "";
-		}
-		else {
-			document.getElementById("results").innerHTML = value;
-		}
-	},
+
+	_setStatus: function (value) {
+	    if (!value) {
+	        document.getElementById("status").innerHTML = " ";
+	    }
+	    else {
+	        document.getElementById("status").innerHTML = value;
+	    }
+	}
 }

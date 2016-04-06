@@ -1,6 +1,6 @@
 Geolocation
 ==================
-<a href="https://platform.telerik.com/#appbuilder/clone/https%3A%2F%2Fgithub.com%2FIcenium%2Fsample-geolocation" target="_blank"><img src="http://docs.telerik.com/platform/samples/images/try-in-appbuilder.png" alt="Try in AppBuilder" title="Try in AppBuilder" /></a>  
+<a href="https://platform.telerik.com/#appbuilder/clone/https%3A%2F%2Fgithub.com%2FIcenium%2Fsample-geolocation" target="_blank"><img src="http://docs.telerik.com/platform/samples/images/try-in-appbuilder.png" alt="Try in the Platform" title="Try in the Platform" /></a>  
 
 <a id="top"></a>
 * [Overview](#overview)
@@ -11,7 +11,7 @@ Geolocation
 
 This sample shows you how to use the Geolocation API to get geolocation information about a device from the device GPS, network IP address, RFID, WiFi and Bluetooth MAC address and GSM/CDMA cell IDs.
 
-> *Supported mobile platforms:* iOS, Android, Windows Phone
+> *Supported mobile platforms:* iOS 7.1+, Android 4.4+, Windows Phone 8.1+
 >
 > *Developed with:* Windows Phone SDK 8.1, Apache Cordova 4.0.0
 
@@ -21,7 +21,7 @@ This sample shows you how to use the Geolocation API to get geolocation informat
 
 Platform | Home | Geolocation Data
 ---|---|---
-All | ![](https://raw.githubusercontent.com/Icenium/sample-geolocation/master/screenshots/home.png) | ![](https://raw.githubusercontent.com/Icenium/sample-geolocation/master/screenshots/watch.png)
+All | ![](screenshots/home.png) | ![](screenshots/watch.png)
 
 [Back to Top](#top)
 
