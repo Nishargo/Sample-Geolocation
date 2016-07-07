@@ -21,7 +21,7 @@ This sample shows you how to use the Geolocation API to get geolocation informat
 
 Platform | Home | Geolocation Data
 ---|---|---
-All | ![](screenshots/home.png) | ![](screenshots/watch.png)
+All | ![](https://raw.githubusercontent.com/Icenium/Sample-Geolocation/master/screenshots/home.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-Geolocation/master/screenshots/watch.png)
 
 [Back to Top](#top)
 
